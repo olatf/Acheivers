@@ -1,0 +1,51 @@
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <main>
+        <div class="mains">
+            <h1>ACHIEVERS ALOMEE TENANTS PLATFORM</h1>
+            <br>
+
+            <h2>Login To Manage the Database</h2>
+            <br>
+            {% for message in messages %}
+                <h2 style="color:red">{{message}}</h2>
+            {% endfor %}
+            <br>
+            <div class="">
+                <form action="index" method="POST">
+                    {% csrf_token %}
+                    <label for="">Username</label>
+                    <input type="text" name="username" id="" class="form">
+                    <br>
+                    <label for="">Password</label>
+                    <input type="password" name="password" id="" class="form">
+                    <div class="news">
+                        <button type="submit">Login</button>
+                    </div>
+    
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+</body>

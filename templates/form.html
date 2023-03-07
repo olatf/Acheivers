@@ -1,0 +1,107 @@
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <title>Database</title>
+</head>
+<body>
+    <main >
+        {% if user.is_authenticated %}
+        <a href="index" class="button" style="position:fixed;">Logout</a>
+        {% endif %}
+        <div class="main">
+            <div class="main2">
+                {% if user.is_authenticated %}
+                <div>
+                    <h2>Welcome, <span class="head">{{user}}</span></h2>
+                </div>
+                {% endif %}
+            </div>
+            <h1>ACHIEVERS ALOMEE TENANTS FORM</h1>
+            <div class="oga" id="oga">
+                <button class="form-links active" onclick="opentab(event,'form1')" id="defaultOpen">Form</button>
+                
+                <button class="form-links" onclick="opentab(event,'form2')">Database</button>
+                
+            </div>
+            <div class="sugar" id="form1">
+                <div class="forms">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                    <label for="">First-name</label>
+                    <input type="text" name="fname" id="first-name" placeholder="First Name">
+                    <br>
+                    <br>
+                    <label for="">Last-name</label>
+                    <input type="text" name="lname" id="last-name" placeholder="Last Name">
+                    <br>
+                    <br>
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <br>
+                    <br>
+                    <label for="">PHONE-NUMBER</label>
+                    <input type="Number" name="pnumber" id="phone" placeholder="PHONE-NUMBER" maxlength="11">
+                    <br>
+                    <br>
+                    <label for="">DUE DATE</label>
+                    <input type="date" name="duedate" id="due-date" placeholder="DUE-DATE">
+                    <br>
+                    <br>
+
+                    {% for message in messages  %}
+                        <h2 style="color:red,align:center">{{message}}</h2>
+                    {% endfor %}
+
+                    <div class="news">
+                        <button type="submit">Add to Database</button>
+                    </div>
+
+
+
+                    </form>
+                    <br>
+                    <br>
+                    
+                </div>
+            </div>
+    
+            <div class="sugar " id="form2">
+                <h2>List of Tenants</h2>
+                <br>
+                <table id="tenantTable">
+                    <tr>
+                        <th>S/N</th>
+                        <th>First-Name</th>
+                        <th>Last-name</th>
+                        <th>E-mail</th>
+                        <th>Phone-Number</th>
+                        <th>Due-Date</th>
+                    </tr>
+
+                    {% for client in clients %}
+
+                        <tr>
+                            <td><span id="">{{client.id}}</span></td>
+                            <td><span id="">{{client.first_name}}</span></td>
+                            <td><span id="">{{client.last_name}}</span></td>
+                            <td><span id="">{{client.email}}</span></td>
+                            <td><span id="">{{client.phone_number}}</span></td>
+                            <td><span id="">{{client.Duedate}}</span></td>
+                        </tr>
+                    
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        
+    </main>
+    
+    <script src="{% static 'main.js' %}"></script>
+    
+</body>
+</html>
