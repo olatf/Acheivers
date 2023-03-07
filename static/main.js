@@ -16,10 +16,7 @@ for(let i = 0; i< btns.length;i++){
     })
 
 }
- 
- 
- 
- 
+
  function opentab(evnt,Tab){
     let i, sugar , formlinks
 

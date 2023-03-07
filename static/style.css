@@ -77,6 +77,11 @@ button{
     border-radius: 10px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    display: none;
+}
+
 .button{
     margin: 5px 10px;
     padding: 5px;
@@ -248,23 +253,166 @@ td{
     border-radius: 10px;
 }
 
-@media screen and (min-width: 576px){
-    .main{
-        margin: auto;
-        margin-top: 40px;
-        display: flex;
-        width: 100vw;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        /* border: 1px solid #f15025; */
-        box-shadow: #ccc;
-        /* position: relative; */
-    
-    }
+@media screen and (max-width:560px){
+
+h1{
+
+    margin: 7px 2px;
+    font-size: 1rem;
+    text-align: center;
+}
+.button{
+    margin: 3px 7px;
+    padding: 3px;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3;
+    outline: none;
+    background-color: inherit;
+    border-radius: 10px;
+    text-decoration: none;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+
+.main{
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid #f15025; */
+    box-shadow: #ccc;
+    /* position: relative; */
+    overflow: auto;
 
 }
 
+button{
+    margin: 5px 10px;
+    padding: 5px;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3;
+    outline: none;
+    background-color: inherit;
+    border-radius: 10px;
+}
+
+.forms{
+    width: 80vw;
+    color: white;
+    padding: 0px 5px;
+} 
+label{
+    margin: 10px;
+    color: white;
+    font-size: 1rem;
+}
+input{
+    margin: 5px 3px;
+    padding: 5px;
+    outline: none;
+    background-color: rgb(100, 82, 82);
+    border: none;
+    height: 30px;
+    width: 100%;
+    border-radius: 10px;
+}
+ ::placeholder{
+    color: rgb(22, 18, 18);
+    font-size: .8rem;
+ }
+ .sumbit{
+     margin: auto;
+     padding: 5px;
+     color: white;
+     font-size: 1rem;
+     border: none;
+     cursor: pointer;
+     transition: 0.3;
+     outline: none;
+     background-color: green;
+     width: 50vw;
+     height: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-transform: uppercase;
+     border-radius: 20px;
+     
+ }
+
+ .news{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    /* height: 20px; */
+    margin: auto;
+ }
+
+ .sugar{
+    display: none;
+    margin: 10px;
+    padding: 3px 6px;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+table{
+    border: 2px solid rgb(64, 134, 64);
+    color: white;
+    
+}
+th{
+    font-size: 1rem;
+    padding: 4px;
+    border-left: 1px solid  rgb(64, 134, 64);
+}
+td{
+    font-size: .9rem;
+    padding: 4px;
+    border-left: 1px solid  rgb(64, 134, 64);
+    border-top: 1px solid  rgb(64, 134, 64);
+}
+h2{
+    margin: auto;
+    font-size: .8rem;
+}
+
+.sam{
+    margin-left: 70px;
+    align-items: center;
+    background-color: pink;
+}
+
+.mains{
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid #f15025; */
+    box-shadow: #ccc;
+    /* position: relative; */
+
+
+}
+
+}
 
 
 
